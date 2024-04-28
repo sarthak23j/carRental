@@ -59,6 +59,50 @@ export default function CarPage() {
         return x
     }
 
+    const [purchaseData, setPurchaseData] = useState({
+        car:{
+            brand:brand,
+            model:model,
+            type:type,
+            year:year,
+            price:price,
+            fuel:fuel,
+            rating:rating
+        },
+        name: "",
+        email: "",
+        number: "",
+        fromDate: "",
+        toDate: "",
+    })
+
+    function handleFormSubmit(event) {
+        event.preventDefault();
+        console.log("Purchase Details:", purchaseData);
+        setPurchaseData({
+            car:{
+                brand:brand,
+                model:model,
+                type:type,
+                year:year,
+                price:price,
+                fuel:fuel,
+                rating:rating
+            },
+            name: "",
+            email: "",
+            number: "",
+            fromDate: "",
+            toDate: "",
+            pickup: "",
+            drop: ""
+        })
+        window.alert("Thank you for placing your order! we will contact you shortly on your Email regarding your purchase details and confirmation. Thank you for entrusting us in this process!")
+    }
+
+    function handlePurchaseChange(event) {
+        setPurchaseData({ ...purchaseData, [event.target.name]: event.target.value });
+    }
     return (
         <>
             <section className="carpage">
@@ -95,6 +139,65 @@ export default function CarPage() {
                         </div>
                     </div>
                 </div>
+            </section>
+            <section className="book-now">
+                <div className="book-now-header">
+                    Book Your Ride <span className="blue-text">Now!</span>
+                </div>
+                <form onSubmit={handleFormSubmit}>
+                    <div className="inputs-line-1">
+                        <input className="purchase-inputs"
+                            type="text"
+                            name="name"
+                            placeholder="Name"
+                            value={purchaseData.name}
+                            onChange={handlePurchaseChange} />
+
+                        <input className="purchase-inputs"
+                            type="text"
+                            name="number"
+                            placeholder="Number"
+                            value={purchaseData.number}
+                            onChange={handlePurchaseChange} />
+
+                        <input className="purchase-inputs"
+                            type="email"
+                            name="email"
+                            placeholder="Email"
+                            value={purchaseData.email}
+                            onChange={handlePurchaseChange} />
+                    </div>
+
+                    <div className="inputs-line-2">
+                        <input className="purchase-inputs"
+                            type="date"
+                            name="fromDate"
+                            value={purchaseData.fromDate}
+                            onChange={handlePurchaseChange} />
+
+                        <input className="purchase-inputs"
+                            type="date"
+                            name="toDate"
+                            value={purchaseData.toDate}
+                            onChange={handlePurchaseChange} />
+                    </div>
+
+                    <div className="inputs-line-3">
+                        <textarea className="purchase-inputs"
+                            name="pickup"
+                            placeholder="Pick up point"
+                            value={purchaseData.pickup}
+                            onChange={handlePurchaseChange} />
+
+                        <textarea className="purchase-inputs"
+                            name="drop"
+                            placeholder="Drop off point"
+                            value={purchaseData.drop}
+                            onChange={handlePurchaseChange} />
+                    </div>
+
+                    <button className="purchase-button">Confirm Purchase!</button>
+                </form>
             </section>
         </>
     )

@@ -39,8 +39,57 @@
     align-items: center;
 }
 
+
+
 .rate-star{
     height: 2rem;
     width: 2rem;
+    margin-top: 0.25rem;
 }
 
+.book-now{
+    margin-block: 10rem;
+}
+
+.book-now-header{
+    font-size: 4rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.inputs-line-1, .inputs-line-2, .inputs-line-3{
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin: 2rem;
+}
+
+.purchase-inputs, .purchase-button{
+    height: 5rem;
+    width: 30rem;
+
+    padding-inline: 1rem;
+    font-size: 1.5rem;
+
+    border: solid 4px var(--clr-br1);
+    border-radius: 2.5rem;
+
+    background-color: var(--clr-bg1);
+    color: var(--clr-fg1);
+}
+
+textarea.purchase-inputs{
+    height: 15rem;
+}
+
+.purchase-button{
+    width: 20rem;
+    margin-left: calc(50% - 10rem);
+
+    background-color: var(--clr-fg2);
+    color: var(--clr-bg1);
+
+    font-weight: 600;
+
+    cursor: pointer;
+}
