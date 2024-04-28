@@ -1,0 +1,40 @@
+header{
+    position: sticky;
+    top:0;
+    background-color: var(--clr-bg1);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 10rem;
+
+    height: 20vh;
+    
+    box-shadow: 1rem 0rem 1rem var(--clr-fg2);
+}
+
+.nav-bar{
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+    justify-content: space-evenly;
+
+    padding-right: 5rem;
+
+    background-color: var(--clr-bg1);
+
+    font-size: 2rem;
+
+}
+
+.buy-now-nav-button{
+    padding: 1rem;
+    border-radius: 0.5rem;
+
+    background-color: var(--clr-fg2);
+    color: var(--clr-bg1);
+}
+
+.logo{
+    height: 10rem;
+}

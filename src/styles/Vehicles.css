@@ -1,0 +1,24 @@
+.vehicles-page{
+    border: solid red 2px;
+    margin: 3rem;
+
+    display: flex;
+    gap: 2rem;
+}
+
+.vehicles-page > * {
+    border: solid pink 2px;
+}
+
+.filters-panel{
+    width: 30vw;
+}
+
+.vehicle-cards{
+    width: 70vw;
+
+    display: flex;
+    gap: 3rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}

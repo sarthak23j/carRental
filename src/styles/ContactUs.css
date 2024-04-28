@@ -1,0 +1,86 @@
+.contact-us{
+    text-align: center;
+}
+
+.contact-header{
+    font-size: 4rem;
+    margin: 4rem;
+}
+
+.contact-cards{
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.contact-card{
+    border: solid var(--clr-br1) 2px;
+    border-radius: 1rem;
+
+    height: 25rem;
+    width: 20rem;
+}
+
+.contact-card > .card-img{
+    height: 5rem;
+    margin: 4rem 0 2.5rem 0;
+}
+
+.contact-card > .card-header {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+
+.feedback-inputs{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+  
+}
+
+.feedback-input-format{
+    margin: 1rem;
+    padding: 2rem;
+
+    background-color: transparent;
+    border: solid var(--clr-br1) 2px;
+    border-radius: 3rem;
+
+    height: 6rem;
+    width: 40rem;
+
+    font-size: 1.8rem;
+    font-family: "PT Sans Caption", Sans-serif;
+
+    color: var(--clr-fg1);
+    
+}
+
+input::placeholder, textarea::placeholder{
+    color: var(--clr-fg3);
+}
+
+.feedback-inputs-3{
+    height: 15rem;
+    width: 70rem;
+}
+
+.feedback-submit{
+    margin: auto;
+    padding: 1rem 0;
+    font-size: 2.5rem;
+
+    color: var(--clr-bg1);
+    background-color: var(--clr-fg2);
+
+    border: solid var(--clr-bg1) 1rem;
+    border-radius: 2rem;
+
+    width: 20rem;
+}
+
+.feedback-submit:hover{
+    cursor:pointer;
+}

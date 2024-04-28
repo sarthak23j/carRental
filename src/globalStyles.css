@@ -1,0 +1,39 @@
+:root{
+    --clr-bg1:rgb(8, 15, 23);
+    --clr-fg1:#eeeeee;
+    --clr-fg2:#00ffff;
+    --clr-fg3:#AAAAAA;
+    --clr-fg4:#0077ff;
+    --clr-br1:#555555;
+}
+
+*,*::after,*::before{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "PT Sans Caption", Sans-serif;
+    
+    background-color:var(--clr-bg1);
+    color:var(--clr-fg1);
+
+    line-height: 1.4;
+}
+
+a{
+    text-decoration: none;
+    color: var(--clr-fg1);
+}
+
+.blue-text{
+    color:var(--clr-fg2);
+}
+
+.dblue-text{
+    color: var(--clr-fg4);
+}
+
+.hide{
+    display: hidden;
+}

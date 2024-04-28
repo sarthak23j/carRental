@@ -1,0 +1,35 @@
+.team-member{
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 10rem 15rem;
+}
+
+.member-img{
+    height: 20rem;
+    width: 20rem;
+
+    border-radius: 10rem;
+}
+
+.member-text{
+    font-size: 3rem;
+    font-weight: 600;
+    
+    padding-bottom: 0rem;
+}
+
+.member-info{
+    font-size: 1.8rem;
+    font-weight: 300;
+    
+    padding-top: 1rem;
+    line-height: 2.5rem;
+
+}
+
+.member-linkedin{
+    color: var(--clr-fg2);
+    margin-top: 3rem;
+    text-decoration: underline;
+}
