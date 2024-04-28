@@ -1,24 +1,88 @@
 .vehicles-page{
-    border: solid red 2px;
     margin: 3rem;
 
     display: flex;
     gap: 2rem;
 }
 
-.vehicles-page > * {
-    border: solid pink 2px;
-}
-
-.filters-panel{
-    width: 30vw;
-}
-
 .vehicle-cards{
     width: 70vw;
-
+    
     display: flex;
     gap: 3rem;
     flex-wrap: wrap;
     justify-content: center;
+}
+
+.reset-buttons{
+    display: flex;
+    justify-content: space-between;
+}
+
+.reset-button{
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    background-color: var(--clr-bg2);
+
+    border: solid 2px var(--clr-br1);
+    border-radius: 2rem;
+
+    cursor: pointer;
+}
+
+.filters-panel{
+    width: 25vw;
+    margin-right: 5rem;
+}
+
+.filter-search{
+    background-color: var(--clr-bg1);
+    border: solid var(--clr-br1) 3px;
+    border-radius: 2rem;
+
+    height: 4rem;
+    width: 100%;
+
+    margin-top: 2rem;
+    padding-inline: 1rem;
+    
+    font-size: 1.4rem;
+    color: var(--clr-fg1);
+}
+
+.filter-header{
+    font-size: 2rem;
+    text-align: center;
+    margin: 1rem;
+}
+
+.filter-options{
+    padding: 1rem;
+    font-size: 1.4rem;
+}
+
+.rating-section{
+    display: flex;
+}
+
+.rating-star{
+    height: 3rem;
+    display: flex;
+    gap:0.5rem;
+    align-items: center;
+}
+
+.star{
+    height: 1.7rem;
+    width: 1.9rem;
+    margin-bottom: 0.25rem;
+}
+
+.car-type, .price-range, .car-rating{
+    margin: 1rem;
+    padding: 1rem 5rem;
+    
+    background-color: var(--clr-bg2);
+    border: solid var(--clr-br1) 2px;
+    border-radius: 1rem;
 }

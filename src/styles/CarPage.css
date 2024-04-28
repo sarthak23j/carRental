@@ -1,0 +1,45 @@
+.carpage{
+    margin: 4rem;
+
+    display: flex;
+    gap:2rem;
+}
+
+.carpage-img{
+    height: 35vh;
+    width: 40vw;
+    
+    margin-top: 5rem;
+    border-radius: 1rem;
+
+    object-fit: cover;
+}
+
+.carpage-data{
+    margin-left: 5rem;
+    font-size:2rem;
+}
+
+.carpage-model, .carpage-brand{
+    font-size: 6rem;
+    font-weight: 600;
+}
+
+.carpage-info{
+    padding-top: 4rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.carpage-rating{
+    height: 3rem;
+    display: flex;
+    gap:0.5rem;
+    align-items: center;
+}
+
+.rate-star{
+    height: 2rem;
+    width: 2rem;
+}
+
