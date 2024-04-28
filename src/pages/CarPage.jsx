@@ -69,25 +69,25 @@ export default function CarPage() {
 
                     <div className="carpage-info">
                         <div className="carpage-info-l">
-                            <div className="carpage-price">Price per day </div>
-                            <div className="carpage-type">Car Type </div>
-                            <div className="carpage-fuel">Fuel Type </div>
-                            <div className="carpage-year">Model Manufacturing year </div>
-                            <div className="carpage-rating">Customer Ratings </div>
+                            <div className="carpage-infodata">Price per day </div>
+                            <div className="carpage-infodata">Car Type </div>
+                            <div className="carpage-infodata">Fuel Type </div>
+                            <div className="carpage-infodata">Model Manufacturing year </div>
+                            <div className="carpage-infodata">Customer Ratings </div>
                         </div>
                         <div className="carpage-info-m">
-                            <div className="carpage-price">:</div>
-                            <div className="carpage-type">:</div>
-                            <div className="carpage-fuel">:</div>
-                            <div className="carpage-year">:</div>
-                            <div className="carpage-rating">:</div>
+                            <div className="carpage-infodata">:</div>
+                            <div className="carpage-infodata">:</div>
+                            <div className="carpage-infodata">:</div>
+                            <div className="carpage-infodata">:</div>
+                            <div className="carpage-infodata">:</div>
                         </div>
                         <div className="carpage-info-r">
-                            <div className="carpage-price">{`${price} Rs / day`}</div>
-                            <div className="carpage-type">{type}</div>
-                            <div className="carpage-fuel">{fuel}</div>
-                            <div className="carpage-year">{year}</div>
-                            <div className="carpage-rating">
+                            <div className="carpage-infodata">{`${price} Rs / day`}</div>
+                            <div className="carpage-infodata">{type}</div>
+                            <div className="carpage-infodata">{fuel}</div>
+                            <div className="carpage-infodata">{year}</div>
+                            <div className="carpage-infodata">
                                 {stars.map((starIcon) => (
                                     <img key={keyGen()} src={starIcon} alt="star" className="rate-star" />
                                 ))}
