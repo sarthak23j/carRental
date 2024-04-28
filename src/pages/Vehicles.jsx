@@ -314,7 +314,6 @@ export default function Vehicles() {
                     </div>
                 </form>
             </div>
-
         </section>
     )
 }
