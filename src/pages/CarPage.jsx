@@ -76,29 +76,43 @@ export default function CarPage() {
         toDate: "",
     })
 
-    function handleFormSubmit(event) {
+    const handlePurchaseSubmit = async (event) => {
         event.preventDefault();
-        console.log("Purchase Details:", purchaseData);
-        setPurchaseData({
-            car:{
-                brand:brand,
-                model:model,
-                type:type,
-                year:year,
-                price:price,
-                fuel:fuel,
-                rating:rating
-            },
-            name: "",
-            email: "",
-            number: "",
-            fromDate: "",
-            toDate: "",
-            pickup: "",
-            drop: ""
+
+        const purchasedt = { ...purchaseData }
+
+        const response = await fetch("http://127.0.0.1:3000/api/purchase",{
+            method: "POST",
+            headers: {"Content-Type": "application/json" },
+            body: JSON.stringify(purchasedt)
         })
-        window.alert("Thank you for placing your order! we will contact you shortly on your Email regarding your purchase details and confirmation. Thank you for entrusting us in this process!")
-    }
+
+        if(response.ok){
+            setPurchaseData({
+                car: {
+                  brand: "",
+                  model: "",
+                  type: "",
+                  year: "",
+                  price: "",
+                  fuel: "",
+                  rating: ""
+                },
+                name: "",
+                email: "",
+                number: "",
+                fromDate: "",
+                toDate: "",
+                pickup: "",
+                drop: ""
+              });
+    
+            window.alert("Your feedback has been successfully submitted! Our team will get back to you shortly.")
+        } else {
+            console.error("Error submitting feedback", response)
+            window.alert("An error occurred while submitting feedback, please try again!")
+        }
+    };
 
     function handlePurchaseChange(event) {
         setPurchaseData({ ...purchaseData, [event.target.name]: event.target.value });
@@ -144,7 +158,7 @@ export default function CarPage() {
                 <div className="book-now-header">
                     Book Your Ride <span className="blue-text">Now!</span>
                 </div>
-                <form onSubmit={handleFormSubmit}>
+                <form onSubmit={handlePurchaseSubmit}>
                     <div className="inputs-line-1">
                         <input className="purchase-inputs"
                             type="text"

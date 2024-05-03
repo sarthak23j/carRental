@@ -70,18 +70,31 @@ export default function ContactUs() {
         setFeedbackData({ ...feedbackData, [event.target.name]: event.target.value });
     };
 
-    const handleFeedbackSubmit = (event) => {
+    const handleFeedbackSubmit = async (event) => {
         event.preventDefault();
-        console.log("Feedback Data:", feedbackData);
-        setFeedbackData({
-            name: "",
-            email: "",
-            number: "",
-            subject: "",
-            message: "",
+
+        const fbd = { ...feedbackData }
+
+        const response = await fetch("http://127.0.0.1:3000/api/feedback",{
+            method: "POST",
+            headers: {"Content-Type": "application/json" },
+            body: JSON.stringify(fbd)
         })
 
-        window.alert("Your feedback has been successfully submitted! Our team will get back to you shortly.")
+        if(response.ok){
+            setFeedbackData({
+                name: "",
+                email: "",
+                number: "",
+                subject: "",
+                message: "",
+            })
+    
+            window.alert("Your feedback has been successfully submitted! Our team will get back to you shortly.")
+        } else {
+            console.error("Error submitting feedback", response)
+            window.alert("An error occurred while submitting feedback, please try again!")
+        }
     };
 
     return (
