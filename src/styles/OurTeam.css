@@ -10,6 +10,8 @@
     width: 20rem;
 
     border-radius: 10rem;
+
+    object-fit: cover;
 }
 
 .member-text{
