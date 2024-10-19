@@ -13,7 +13,7 @@ export default function OurTeam(){
                 <div className="member-name">SARTHAK JINDAL</div>
                 <div className="member-info">
                     <div className="member-degree">B.tech Student in VIT, Vellore</div>
-                    <Link className="member-linkedin" to="https://www.linkedin.com/in/sarthak-jindal-203217219/">LinkedIn</Link>
+                    <Link className="member-linkedin" to="https://github.com/sarthak23j">GitHub</Link>
                 </div>
             </div>
         </section><section className="team-member">
