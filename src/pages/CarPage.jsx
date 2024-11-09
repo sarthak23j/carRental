@@ -2,52 +2,10 @@ import { useParams } from "react-router-dom"
 import { useState, useEffect } from "react"
 import "../styles/CarPage.css"
 
-import Swift from "../../assets/vehicles/swift.jpg"
-import Nexon from "../../assets/vehicles/nexon.jpg"
-import Bolero from "../../assets/vehicles/boleroNeo.jpg"
-import Creta from "../../assets/vehicles/creta.jpg"
-import Hyryder from "../../assets/vehicles/hyryder.jpg"
-import Dzire from "../../assets/vehicles/dzire.jpg"
-import Tigor from "../../assets/vehicles/tigor.jpg"
-import XUV300 from "../../assets/vehicles/xuv300.jpg"
-import i10 from "../../assets/vehicles/i10.jpg"
-import Kwid from "../../assets/vehicles/kwid.jpg"
-import City from "../../assets/vehicles/city.jpg"
-import Rapid from "../../assets/vehicles/rapid.jpg"
-import Polo from "../../assets/vehicles/polo.jpg"
-import Magnite from "../../assets/vehicles/magnite.jpg"
-import WagonR from "../../assets/vehicles/wagonr.jpg"
-import Altroz from "../../assets/vehicles/altroz.jpg"
-import KUV100 from "../../assets/vehicles/kuv100.jpg"
-import Venue from "../../assets/vehicles/venue.jpg"
-import Sonet from "../../assets/vehicles/sonet.jpg"
-import Scorpio from "../../assets/vehicles/scorpio.jpg"
-
-import star from "../../assets/pictures/star.png"
+import star from "/pictures/star.png"
 
 
 export default function CarPage() {
-
-    const images = [Swift,
-        Nexon,
-        Bolero,
-        Creta,
-        Hyryder,
-        Dzire,
-        Tigor,
-        XUV300,
-        i10,
-        Kwid,
-        City,
-        Rapid,
-        Polo,
-        Magnite,
-        WagonR,
-        Altroz,
-        KUV100,
-        Venue,
-        Sonet,
-        Scorpio]
 
     const { key } = useParams()
 
@@ -65,9 +23,6 @@ export default function CarPage() {
         fetchInfo()
         console.log("fetched vehicles data!")
     }, []);
-
-
-    console.log(data)
 
     let brand = data.brand
     let model = data.model
@@ -157,7 +112,7 @@ export default function CarPage() {
                             <div className="carpage-infodata">Price per day </div>
                             <div className="carpage-infodata">Car Type </div>
                             <div className="carpage-infodata">Fuel Type </div>
-                            <div className="carpage-infodata">Model Manufacturing year </div>
+                            <div className="carpage-infodata">Manufacturing Year </div>
                             <div className="carpage-infodata">Customer Ratings </div>
                         </div>
                         <div className="carpage-info-m">

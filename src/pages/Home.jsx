@@ -1,11 +1,12 @@
 import "../styles/Home.css"
 
 // import HomeCar from "../../assets/pictures/MercedesSuv.png"
-import HomeVideo from "../../assets/pictures/cardrive.mp4"
-import Review1 from "../../assets/pictures/cars1.png"
-import Review2 from "../../assets/pictures/cars2.png"
-import Reviewer1 from "../../assets/pictures/Harry.png"
-import Reviewer2 from "../../assets/pictures/Ron.png"
+import HomeVideo from "/pictures/cardrive.mp4"
+import Review1 from "/pictures/cars1.png"
+import Review2 from "/pictures/cars2.png"
+import Reviewer1 from "/pictures/Harry.png"
+import Reviewer2 from "/pictures/Ron.png"
+
 import FrontWelcome from "../components/FrontWelcome"
 
 // function FrontWelcome(){

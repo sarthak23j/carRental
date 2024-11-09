@@ -1,10 +1,10 @@
 import { useState } from "react"
 
 import "../styles/ContactUs.css"
-import Address from "../../assets/pictures/address.png"
-import Email from "../../assets/pictures/email.png"
-import Clock from "../../assets/pictures/clock.png"
-import Phone from "../../assets/pictures/phone.png"
+import Address from "/pictures/address.png"
+import Email from "/pictures/email.png"
+import Clock from "/pictures/clock.png"
+import Phone from "/pictures/phone.png"
 
 
 

@@ -1,4 +1,4 @@
-import HomeCar from "../../assets/pictures/MercedesSuv.png"
+import HomeCar from "/pictures/MercedesSuv.png"
 
 export default function FrontWelcome(){
     return(

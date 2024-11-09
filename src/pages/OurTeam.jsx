@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom"
 
 import "../styles/OurTeam.css"
-import Aditya from "../../assets/pictures/Aditya.jpeg"
-import Sarthak from "../../assets/pictures/Sarthak.jpg"
+import Aditya from "/pictures/Aditya.jpeg"
+import Sarthak from "/pictures/Sarthak.png"
 
 export default function OurTeam(){
     return(

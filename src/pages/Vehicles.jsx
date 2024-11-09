@@ -3,59 +3,20 @@ import { Link } from "react-router-dom";
 import VehicleCard from "../components/VehicleCard";
 import "../styles/Vehicles.css"
 
-import swift from "../../assets/vehicles/swift.jpg"
-import nexon from "../../assets/vehicles/nexon.jpg"
-import bolero from "../../assets/vehicles/boleroNeo.jpg"
-import creta from "../../assets/vehicles/creta.jpg"
-import hyryder from "../../assets/vehicles/hyryder.jpg"
-import dzire from "../../assets/vehicles/dzire.jpg"
-import tigor from "../../assets/vehicles/tigor.jpg"
-import xuv300 from "../../assets/vehicles/xuv300.jpg"
-import i10 from "../../assets/vehicles/i10.jpg"
-import kwid from "../../assets/vehicles/kwid.jpg"
-import city from "../../assets/vehicles/city.jpg"
-import rapid from "../../assets/vehicles/rapid.jpg"
-import polo from "../../assets/vehicles/polo.jpg"
-import magnite from "../../assets/vehicles/magnite.jpg"
-import wagonr from "../../assets/vehicles/wagonr.jpg"
-import altroz from "../../assets/vehicles/altroz.jpg"
-import kuv100 from "../../assets/vehicles/kuv100.jpg"
-import venue from "../../assets/vehicles/venue.jpg"
-import sonet from "../../assets/vehicles/sonet.jpg"
-import scorpio from "../../assets/vehicles/scorpio.jpg"
-
-import star from "../../assets/pictures/star.png"
+import star from "/pictures/star.png"
 
 export default function Vehicles() {
-
-    const images = [swift,
-        nexon,
-        bolero,
-        creta,
-        hyryder,
-        dzire,
-        tigor,
-        xuv300,
-        i10,
-        kwid,
-        city,
-        rapid,
-        polo,
-        magnite,
-        wagonr,
-        altroz,
-        kuv100,
-        venue,
-        sonet,
-        scorpio]
 
     const url = "http://127.0.0.1:3000/api/data";
 
     const [data, setData] = useState([]);
+    const [loaded, setLoaded] = useState(false);
 
     const fetchInfo = async () => {
         const res = await fetch(url);
         const cars = await res.json();
+
+        setLoaded(true)
         return setData(cars);
     }
 
@@ -83,7 +44,6 @@ export default function Vehicles() {
         } else {
             setFilters({ ...filters, [name]: value })
         }
-        console.log("Filter Data:", filters);
     }
 
     const vehiclecards = data.map(car => {
@@ -159,6 +119,7 @@ export default function Vehicles() {
     }
 
     return (
+        <>
         <section className="vehicles-page">
             <div className="vehicle-cards">
                 {vehiclecards}
@@ -178,7 +139,7 @@ export default function Vehicles() {
                             placeholder="search model / manufacturer"
                             value={filters.name}
                             onChange={handleFilterChange}
-                        />
+                            />
                     </div>
                     <div className="car-type">
                         <div className="filter-header">Car Type</div>
@@ -316,5 +277,6 @@ export default function Vehicles() {
                 </form>
             </div>
         </section>
+        </>
     )
 }

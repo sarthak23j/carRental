@@ -1,7 +1,7 @@
 import { useLocation, Link } from "react-router-dom"
 import "../styles/Header.css"
 
-import logo from "../../assets/pictures/logo.jpg"
+import logo from "/pictures/logo.jpg"
 
 export default function Header() {
 
