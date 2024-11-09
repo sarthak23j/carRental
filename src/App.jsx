@@ -9,7 +9,7 @@ import "./globalStyles.css"
 
 export default function App() {
 
-    const uri = "http://127.0.0.1:3000/api/"
+    const uri = process.env.REACT_APP_DATA_URL
 
     return (
         <BrowserRouter>
