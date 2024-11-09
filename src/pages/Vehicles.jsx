@@ -5,7 +5,7 @@ import "../styles/Vehicles.css"
 
 import star from "/pictures/star.png"
 
-export default function Vehicles({uri}) {
+export default function Vehicles() {
 
     const url = "https://dataapi-czpg.onrender.com/api/data"
 

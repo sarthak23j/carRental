@@ -5,11 +5,11 @@ import "../styles/CarPage.css"
 import star from "/pictures/star.png"
 
 
-export default function CarPage({uri}) {
+export default function CarPage() {
 
     const { key } = useParams()
 
-    const url = duri
+    const url = "https://dataapi-czpg.onrender.com/api/data"
 
     const [data, setData] = useState([]);
 
@@ -63,7 +63,7 @@ export default function CarPage({uri}) {
 
         const purchasedt = { ...purchaseData }
 
-        const fetchUrl = puri
+        const fetchUrl = "https://dataapi-czpg.onrender.com/api/purchase"
 
         const response = await fetch(fetchUrl,{
             method: "POST",

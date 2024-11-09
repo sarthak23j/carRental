@@ -8,7 +8,7 @@ import Phone from "/pictures/phone.png"
 
 
 
-export default function ContactUs({uri}) {
+export default function ContactUs() {
 
     function ContactCard(Props) {
         return (
@@ -75,7 +75,7 @@ export default function ContactUs({uri}) {
 
         const fbd = { ...feedbackData }
 
-        fetchUri = uri
+        fetchUri = "https://dataapi-czpg.onrender.com/api/feedback"
 
         const response = await fetch(fetchUri,{
             method: "POST",
