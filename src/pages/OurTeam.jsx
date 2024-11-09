@@ -16,7 +16,8 @@ export default function OurTeam(){
                     <Link className="member-linkedin" to="https://github.com/sarthak23j">GitHub</Link>
                 </div>
             </div>
-        </section><section className="team-member">
+        </section>
+        {/* <section className="team-member">
             <img className="member-img" src={Aditya} alt="" />
             <div className="member-text">
                 <div className="member-name">ADITYA SINGH</div>
@@ -25,7 +26,7 @@ export default function OurTeam(){
                     <Link className="member-linkedin" to="https://www.linkedin.com/in/aditya-singh-8a1953235">LinkedIn</Link>
                 </div>
             </div>
-        </section>
+        </section> */}
         </>
     )
 }
