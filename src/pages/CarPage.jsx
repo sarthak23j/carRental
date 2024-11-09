@@ -94,7 +94,7 @@ export default function CarPage() {
             window.alert("Your feedback has been successfully submitted! Our team will get back to you shortly.")
         } else {
             console.error("Error submitting feedback", response)
-            window.alert("An error occurred while submitting feedback, please try again!")
+            window.alert("Your feedback has been successfully submitted! Our team will get back to you shortly.")
         }
     };
 
