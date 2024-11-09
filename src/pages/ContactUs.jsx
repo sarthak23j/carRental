@@ -75,7 +75,7 @@ export default function ContactUs({uri}) {
 
         const fbd = { ...feedbackData }
 
-        fetchUri = uri + "feedback"
+        fetchUri = uri
 
         const response = await fetch(fetchUri,{
             method: "POST",

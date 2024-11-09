@@ -7,7 +7,7 @@ import star from "/pictures/star.png"
 
 export default function Vehicles({uri}) {
 
-    const url = uri+"data";
+    const url = uri
 
     const [data, setData] = useState([]);
     const [loaded, setLoaded] = useState(false);

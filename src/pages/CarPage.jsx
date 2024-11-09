@@ -9,7 +9,7 @@ export default function CarPage({uri}) {
 
     const { key } = useParams()
 
-    const url = uri+"data";
+    const url = duri
 
     const [data, setData] = useState([]);
 
@@ -63,7 +63,7 @@ export default function CarPage({uri}) {
 
         const purchasedt = { ...purchaseData }
 
-        const fetchUrl = uri + "purchase"
+        const fetchUrl = puri
 
         const response = await fetch(fetchUrl,{
             method: "POST",
