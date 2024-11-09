@@ -8,15 +8,18 @@ import ContactUs from "./pages/ContactUs"
 import "./globalStyles.css"
 
 export default function App() {
+
+    const uri = "http://127.0.0.1:3000/api/"
+
     return (
         <BrowserRouter>
             <Routes>
                 <Route path="/" element={<Layout />} >
                     <Route index element={<Home />} />
-                    <Route path="/vehicles" element={<Vehicles />} />
-                    <Route path="/vehicles/:key" element={<CarPage />}/>
+                    <Route path="/vehicles" element={<Vehicles uri = {uri} />} />
+                    <Route path="/vehicles/:key" element={<CarPage uri = {uri} />}/>
                     <Route path="/our-team" element={<OurTeam />} />
-                    <Route path="/contact-us" element={<ContactUs />} />
+                    <Route path="/contact-us" element={<ContactUs uri = {uri} />} />
                 </Route>
             </Routes>
         </BrowserRouter>

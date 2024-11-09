@@ -5,11 +5,11 @@ import "../styles/CarPage.css"
 import star from "/pictures/star.png"
 
 
-export default function CarPage() {
+export default function CarPage({uri}) {
 
     const { key } = useParams()
 
-    const url = "http://127.0.0.1:3000/api/data";
+    const url = uri+"data";
 
     const [data, setData] = useState([]);
 
@@ -63,7 +63,9 @@ export default function CarPage() {
 
         const purchasedt = { ...purchaseData }
 
-        const response = await fetch("http://127.0.0.1:3000/api/purchase",{
+        const fetchUrl = uri + "purchase"
+
+        const response = await fetch(fetchUrl,{
             method: "POST",
             headers: {"Content-Type": "application/json" },
             body: JSON.stringify(purchasedt)

@@ -5,9 +5,9 @@ import "../styles/Vehicles.css"
 
 import star from "/pictures/star.png"
 
-export default function Vehicles() {
+export default function Vehicles({uri}) {
 
-    const url = "http://127.0.0.1:3000/api/data";
+    const url = uri+"data";
 
     const [data, setData] = useState([]);
     const [loaded, setLoaded] = useState(false);

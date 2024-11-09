@@ -8,7 +8,7 @@ import Phone from "/pictures/phone.png"
 
 
 
-export default function ContactUs() {
+export default function ContactUs({uri}) {
 
     function ContactCard(Props) {
         return (
@@ -75,7 +75,9 @@ export default function ContactUs() {
 
         const fbd = { ...feedbackData }
 
-        const response = await fetch("http://127.0.0.1:3000/api/feedback",{
+        fetchUri = uri + "feedback"
+
+        const response = await fetch(fetchUri,{
             method: "POST",
             headers: {"Content-Type": "application/json" },
             body: JSON.stringify(fbd)
