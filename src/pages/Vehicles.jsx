@@ -14,6 +14,8 @@ export default function Vehicles({uri}) {
 
     const fetchInfo = async () => {
         const res = await fetch(url);
+        console.log(res)
+        console.log(res.json())
         const cars = await res.json();
 
         setLoaded(true)
