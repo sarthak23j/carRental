@@ -33,7 +33,7 @@ export default function CarPage() {
     // const rating = data.rating
     // const img64 = data.img64
 
-    const stars = Array(parseInt(rating) || 0).fill(star);
+    const stars = Array(parseInt(data.rating) || 0).fill(star);
 
     let x = 1
     function keyGen() {
