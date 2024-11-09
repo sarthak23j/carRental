@@ -7,7 +7,7 @@ import star from "/pictures/star.png"
 
 export default function Vehicles({uri}) {
 
-    const url = uri
+    const url = "https://dataapi-czpg.onrender.com/api/data"
 
     const [data, setData] = useState([]);
     const [loaded, setLoaded] = useState(false);
