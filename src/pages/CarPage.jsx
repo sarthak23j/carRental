@@ -9,7 +9,7 @@ export default function CarPage() {
 
     const { key } = useParams()
 
-    const url = process.env.REACT_APP_DATA_URL
+    const url = "https://dataapi-czpg.onrender.com/api/data"
 
     const [data, setData] = useState([]);
 
@@ -63,7 +63,7 @@ export default function CarPage() {
 
         const purchasedt = { ...purchaseData }
 
-        const fetchUrl = process.env.REACT_APP_PURCHASE_URL
+        const fetchUrl = "https://dataapi-czpg.onrender.com/api/purchase"
 
         const response = await fetch(fetchUrl,{
             method: "POST",
