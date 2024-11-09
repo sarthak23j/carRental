@@ -75,7 +75,7 @@ export default function ContactUs() {
 
         const fbd = { ...feedbackData }
 
-        fetchUri = "https://dataapi-czpg.onrender.com/api/feedback"
+        fetchUri = process.env.REACT_APP_FEEDBACK_URL
 
         const response = await fetch(fetchUri,{
             method: "POST",
