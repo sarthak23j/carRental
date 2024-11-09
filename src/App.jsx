@@ -19,7 +19,7 @@ export default function App() {
             <Routes>
                 <Route path="/" element={<Layout />} >
                     <Route index element={<Home />} />
-                    <Route path="/vehicles" element={<Vehicles uri = {datauri} />} />
+                    <Route path="/vehicles" element={<Vehicles uri = {dataUri} />} />
                     <Route path="/vehicles/:key" element={<CarPage puri = {purchaseUri} duri = {dataUri} />}/>
                     <Route path="/our-team" element={<OurTeam />} />
                     <Route path="/contact-us" element={<ContactUs uri = {feedbackUri} />} />
