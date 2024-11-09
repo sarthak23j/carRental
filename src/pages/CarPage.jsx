@@ -23,15 +23,15 @@ export default function CarPage() {
         fetchInfo()
         console.log("fetched vehicles data!")
     }, []);
-
-    let brand = data.brand
-    let model = data.model
-    let type = data.type
-    let year = data.year
-    let price = data.price
-    let fuel = data.fuel_type
-    let rating = data.rating
-    let img64 = data.img64
+    
+    // const brand = data.brand
+    // const model = data.model
+    // const type = data.type
+    // const year = data.year
+    // const price = data.price
+    // const fuel = data.fuel_type
+    // const rating = data.rating
+    // const img64 = data.img64
 
     const stars = Array(parseInt(rating) || 0).fill(star);
 
@@ -43,13 +43,13 @@ export default function CarPage() {
 
     const [purchaseData, setPurchaseData] = useState({
         car:{
-            brand:brand,
-            model:model,
-            type:type,
-            year:year,
-            price:price,
-            fuel:fuel,
-            rating:rating
+            brand:data.brand,
+            model:data.model,
+            type:data.type,
+            year:data.year,
+            price:data.price,
+            fuel:data.fuel_type,
+            rating:data.rating
         },
         name: "",
         email: "",
@@ -104,10 +104,10 @@ export default function CarPage() {
     return (
         <>
             <section className="carpage">
-                <img src={`data:image/png;base64,${img64}`} alt="car image" className="carpage-img" />
+                <img src={`data:image/png;base64,${data.img64}`} alt="car image" className="carpage-img" />
                 <div className="carpage-data">
-                    <div className="carpage-brand">{brand}</div>
-                    <div className="carpage-model blue-text">{model}</div>
+                    <div className="carpage-brand">{data.brand}</div>
+                    <div className="carpage-model blue-text">{data.model}</div>
 
                     <div className="carpage-info">
                         <div className="carpage-info-l">
@@ -125,10 +125,10 @@ export default function CarPage() {
                             <div className="carpage-infodata">:</div>
                         </div>
                         <div className="carpage-info-r">
-                            <div className="carpage-infodata">{`${price} Rs / day`}</div>
-                            <div className="carpage-infodata">{type}</div>
-                            <div className="carpage-infodata">{fuel}</div>
-                            <div className="carpage-infodata">{year}</div>
+                            <div className="carpage-infodata">{`${data.price} Rs / day`}</div>
+                            <div className="carpage-infodata">{data.type}</div>
+                            <div className="carpage-infodata">{data.fuel_type}</div>
+                            <div className="carpage-infodata">{data.year}</div>
                             <div className="carpage-infodata">
                                 {stars.map((starIcon) => (
                                     <img key={keyGen()} src={starIcon} alt="star" className="rate-star" />
