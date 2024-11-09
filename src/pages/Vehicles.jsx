@@ -94,7 +94,7 @@ export default function Vehicles() {
         let filteredPrice = true
         let filteredRating = true
 
-        if (filters.name == "" || (car.brand.includes(filters.name) || car.model.includes(filters.name))) {
+        if (filters.name.toLowerCase() == "" || (car.brand.toLowerCase().includes(filters.name.toLowerCase())) || (car.model.toLowerCase().includes(filters.name.toLowerCase()))) {
             filteredName = false
         }
 
@@ -130,9 +130,10 @@ export default function Vehicles() {
         if (!filtered) {
 
             const keyProp = `${car.brand}-${car.model}`;
+
             return (
-                <Link key={keyProp} to={`${car.key}/${car.brand}/${car.model}/${car.type}/${car.price}/${car.year}/${car.fuel_type}/${car.rating}`}>
-                    <VehicleCard carKey={car.key} brand={car.brand} model={car.model} img={images[car.key]} price={car.price} />
+                <Link key={keyProp} to={`${car.key}`}>
+                    <VehicleCard carKey={car.key} brand={car.brand} model={car.model} img={car.img64} price={car.price} />
                 </Link>
             )
         }

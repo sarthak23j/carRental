@@ -1,9 +1,10 @@
 import "../styles/VehicleCard.css"
 
 export default function VehicleCard(Props){
+
     return (
         <div className="card-prop">
-            <img src={Props.img} alt="vehicle image" className="vehicle-img" />
+            <img src={`data:image/png;base64,${Props.img}`} alt="vehicle image" className="vehicle-img" />
             <div className="vehicle-name">
                 {Props.brand + " "} <span className="blue-text">{Props.model}</span>
             </div>

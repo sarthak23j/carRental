@@ -49,7 +49,34 @@ export default function CarPage() {
         Sonet,
         Scorpio]
 
-    const { key, model, brand, type, price, fuel, year, rating } = useParams()
+    const { key } = useParams()
+
+    const url = "http://127.0.0.1:3000/api/data";
+
+    const [data, setData] = useState([]);
+
+    const fetchInfo = async () => {
+        const res = await fetch(url);
+        const cars = await res.json();
+        return setData(cars.find(car => car.key == key));
+    }
+
+    useEffect(() => {
+        fetchInfo()
+        console.log("fetched vehicles data!")
+    }, []);
+
+
+    console.log(data)
+
+    let brand = data.brand
+    let model = data.model
+    let type = data.type
+    let year = data.year
+    let price = data.price
+    let fuel = data.fuel_type
+    let rating = data.rating
+    let img64 = data.img64
 
     const stars = Array(parseInt(rating) || 0).fill(star);
 
@@ -120,7 +147,7 @@ export default function CarPage() {
     return (
         <>
             <section className="carpage">
-                <img src={images[key]} alt="car image" className="carpage-img" />
+                <img src={`data:image/png;base64,${img64}`} alt="car image" className="carpage-img" />
                 <div className="carpage-data">
                     <div className="carpage-brand">{brand}</div>
                     <div className="carpage-model blue-text">{model}</div>
